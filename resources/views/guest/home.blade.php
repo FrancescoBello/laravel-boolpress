@@ -64,7 +64,17 @@
         </style>
     </head>
     <body>
+      <ul class="navbar-nav ml-auto">
+        <li>
+          <a class="navbar-brand" href="{{ url('/post') }}">
+              Post
+          </a>
+        </li>
+        </ul>
+
+
         <div class="flex-center position-ref full-height">
+
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -79,12 +89,13 @@
                 </div>
             @endif
 
+
             <div class="content">
                 <div class="title m-b-md">
                     Homepage
                 </div>
 
-              
+
             </div>
         </div>
     </body>
