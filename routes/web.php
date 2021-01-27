@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', "HomeController@index")->name("index");
+Route::get("/post", "PostController@index")->name("post.index");
 
 Auth::routes();
 
@@ -21,5 +22,6 @@ Auth::routes();
 Route::middleware("auth")->namespace("Admin")->prefix("admin")->name("admin.")->group(function(){
 
   Route::get('/', 'HomeController@index')->name('index');
+  Route::resource("/post", "PostController");
 
 });
