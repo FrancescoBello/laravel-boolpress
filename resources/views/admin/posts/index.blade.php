@@ -24,7 +24,7 @@
             <td> {{ $post->username }} </td>
             <td> {{ $post->title }} </td>
             <td> {{ $post->post_date }} </td>
-            <td><a class="btn btn-info" href="">visualizza</a></td>
+          <td><a class="btn btn-info" href=" }}">visualizza</a></td>
             <td><a class="btn btn-info" href="{{ url("/admin/posts/create") }}">aggiungi</a></td>
           </tr>
 
