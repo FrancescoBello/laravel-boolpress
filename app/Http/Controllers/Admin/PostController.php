@@ -49,7 +49,7 @@ class PostController extends Controller
       $new_post->fill($form_data);
       $new_post->save();
         return redirect()->route("posts.show");
-        
+
     }
 
     /**
@@ -60,6 +60,8 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
+
+      return view("admin.posts.show", compact('post'));
 
     }
 
