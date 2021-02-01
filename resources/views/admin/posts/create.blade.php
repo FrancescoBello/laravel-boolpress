@@ -24,7 +24,17 @@
                   @endforeach
               </select>
                 </div>
-             <button type="submit" class="btn btn-success">
+                <div class="form-group">
+                  @foreach ($tags as $tag)
+                    <div class="form-check">
+                       <input type="checkbox" class="form-check-input" value="{{ $tag->id }}">
+                       <label class="form-check-label" >{{ $tag->name }}</label>
+                    </div>
+                  @endforeach
+                </div>
+
+
+             <button type="submit" class="btn btn-success">aggiungi</button>
          </form>
         </div>
     </div>

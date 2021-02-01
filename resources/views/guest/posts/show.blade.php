@@ -20,17 +20,16 @@
                   <td> {{ $post->username }} </td>
                   <td> {{ $post->title }} </td>
                   <td> {{ $post->post_date }} </td>
+                  @foreach ($post->$tags as $tag)
+                    <td>  {{ $tag->name }} </td>
+
+                 @endforeach
 
 
                 </tr>
             </tbody>
        </table>
-       <p>
 
-         @foreach ($post->$tags as $tag)
-          {{ $tag->name }}
-         @endforeach
-       </p>
 
 
         </div>
