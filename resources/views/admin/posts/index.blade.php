@@ -11,6 +11,8 @@
           <th scope="col">Username</th>
           <th scope="col">Title</th>
           <th scope="col">Post Date</th>
+          <th scope="col">Category</th>
+
 
           <th scope="col"></th>
         </tr>
@@ -25,6 +27,7 @@
             <td> {{ $post->username }} </td>
             <td> {{ $post->title }} </td>
             <td> {{ $post->post_date }} </td>
+            <td> {{ $post->category ? $post->category->name : "/" }} </td>
 
           <td><a class="btn btn-info" href="{{ route("posts.show", ['posts' => $post->id]) }}">visualizza</a></td>
             <td><a class="btn btn-info" href="{{ route("admin.posts.create") }}">aggiungi</a></td>

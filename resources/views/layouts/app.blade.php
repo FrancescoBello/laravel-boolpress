@@ -41,7 +41,7 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                       <li>
-                        <a class="navbar-brand" href="{{ url('/admin/post') }}">
+                        <a class="navbar-brand" href="{{ url('/admin/posts') }}">
                             Post
                         </a>
                       </li>

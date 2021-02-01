@@ -66,7 +66,7 @@
     <body>
       <ul class="navbar-nav ml-auto">
         <li>
-          <a class="navbar-brand" href="{{ url('/posts') }}">
+          <a class="navbar-brand" href="{{ url('/post') }}">
               Post
           </a>
         </li>
