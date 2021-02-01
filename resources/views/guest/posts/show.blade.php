@@ -8,7 +8,6 @@
             <thead>
               <tr>
                 <th scope="col">ID</th>
-                <th scope="col">Username</th>
                 <th scope="col">Title</th>
                 <th scope="col">Post Date</th>
                 <th scope="col">Tag</th>
@@ -17,13 +16,9 @@
             <tbody>
                 <tr>
                   <td> {{ $post->id }} </td>
-                  <td> {{ $post->username }} </td>
                   <td> {{ $post->title }} </td>
                   <td> {{ $post->post_date }} </td>
-                  @foreach ($post->$tags as $tag)
-                    <td>  {{ $tag->name }} </td>
 
-                 @endforeach
 
 
                 </tr>

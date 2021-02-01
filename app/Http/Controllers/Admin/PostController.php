@@ -47,6 +47,13 @@ class PostController extends Controller
     public function store(Request $request)
     {
       $form_data = $request->all();
+      $request->validate([
+        "title"=>"required|max:100",
+        "description"=>"required",
+        "category_id"=>"exists:categories,id",
+        
+      ]);
+
       $new_post = new Post();
       $new_post->fill($form_data);
       $new_post->save();
