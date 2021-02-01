@@ -8,12 +8,12 @@
             @csrf
             <div class="form-group">
               <label for="exampleFormControlInput1">title</label>
-              <input type="text"  class="form-control" id="exampleFormControlInput1">
+              <input type="text" name="title" class="form-control" id="exampleFormControlInput1">
             </div>
 
             <div class="form-group">
               <label for="exampleFormControlTextarea1">Description</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
             <div class="form-group">
               <label>Categoria</label>
@@ -27,7 +27,7 @@
                 <div class="form-group">
                   @foreach ($tags as $tag)
                     <div class="form-check">
-                       <input type="checkbox" class="form-check-input" value="{{ $tag->id }}">
+                       <input type="checkbox" name="tags[]" class="form-check-input" value="{{ $tag->id }}">
                        <label class="form-check-label" >{{ $tag->name }}</label>
                     </div>
                   @endforeach
